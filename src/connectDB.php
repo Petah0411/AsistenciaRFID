@@ -1,8 +1,8 @@
 <?php
 /* Database connection settings */
 	$servername = "localhost";
-    $username = "root";		//put your phpmyadmin username.(default is "root")
-    $password = "";			//if your phpmyadmin has a password put it here.(default is "root")
+    $username = "root";		//Pon tu usuario de PHPmyAdmin.(Por defecto es "root")
+    $password = "";			//Si tu PHPMyadmin tiene una contraseña ponlo aquí.(default is "root")
     $dbname = "rfidattendance";
     
 	$conn = mysqli_connect($servername, $username, $password, $dbname);

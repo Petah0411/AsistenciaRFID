@@ -59,10 +59,10 @@ if (isset($_POST['reset_pass'])) {
 
 	$to = $userEmail;
 
-	$subject = 'Reset your password!!';
+	$subject = 'Reestablezca su contraseña!!';
 
-	$message = '<p>We received a password reset request. The link to reset your password is below. if you did not make this request, you can ignore this email</p>';
-	$message .= '<p>Here is your password reset link: </br>';
+	$message = '<p>Hemos recibido una petición para reestablecer su contraseña, el enlace se encuentra debajo. Si no realizó está petición, por favor ignore el correo.</p>';
+	$message .= '<p>Aquí esta el enlace: </br>';
 	$message .= '<a href="'.$url.'">'.$url.'</a></p>';
 
 	$headers = "MIME-Version: 1.0" . "\r\n";

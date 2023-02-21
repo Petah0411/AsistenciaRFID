@@ -72,23 +72,23 @@ if (isset($_POST['Add'])) {
                             }
                         }
                         else {
-                            echo "The serial number is already taken!";
+                            echo "El número de serie ya no existe!";
                             exit();
                         }
                     }
                 }
                 else{
-                    echo "Empty Fields";
+                    echo "Campos Vacíos";
                     exit();
                 }
             }
             else{
-                echo "This User is already exist";
+                echo "Este usuario ya existe";
                 exit();
             }    
         }
         else {
-            echo "There's no selected Card!";
+            echo "No hay tarjeta seleccionada!";
             exit();
         }
     }
@@ -117,12 +117,12 @@ if (isset($_POST['Update'])) {
         if ($row = mysqli_fetch_assoc($resultl)) {
 
             if ($row['add_card'] == 0) {
-                echo "First, You need to add the User!";
+                echo "Primero, necesitas añadir el usuario!";
                 exit();
             }
             else{
                 if (empty($Uname) && empty($Number) && empty($Email)) {
-                    echo "Empty Fields";
+                    echo "Campos vacíos";
                     exit();
                 }
                 else{
@@ -161,7 +161,7 @@ if (isset($_POST['Update'])) {
                                 $sql="UPDATE users SET username=?, serialnumber=?, gender=?, email=?, device_uid=?, device_dep=? WHERE id=?";
                                 $result = mysqli_stmt_init($conn);
                                 if (!mysqli_stmt_prepare($result, $sql)) {
-                                    echo "SQL_Error_select_Card";
+                                    echo "SQL_Error_seleccionar_tarjeta";
                                     exit();
                                 }
                                 else{
@@ -174,7 +174,7 @@ if (isset($_POST['Update'])) {
                             }
                         }
                         else {
-                            echo "The serial number is already taken!";
+                            echo "El número de serie ya está tomado!";
                             exit();
                         }
                     }
@@ -182,7 +182,7 @@ if (isset($_POST['Update'])) {
             }    
         }
         else {
-            echo "There's no selected User to be updated!";
+            echo "No hay usuario seleccionado para ser actualizado!";
             exit();
         }
     }
@@ -222,7 +222,7 @@ if (isset($_POST['delete'])) {
     $user_id = $_POST['user_id'];
 
     if (empty($user_id)) {
-        echo "There no selected user to remove";
+        echo "No hay usuario seleccionado para ser eliminado!";
         exit();
     } else {
         $sql = "DELETE FROM users WHERE id=?";

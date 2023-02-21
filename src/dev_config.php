@@ -11,7 +11,7 @@ if (isset($_POST['dev_add'])) {
         echo '<p class="alert alert-danger">Please, Set the device name!!</p>';
     }
     elseif (empty($dev_dep)) {
-        echo '<p class="alert alert-danger">Please, Set the device department!!</p>';
+        echo '<p class="alert alert-danger">Por favor, coloque el dispositivo del departamento!!</p>';
     }
     else{
         $token = random_bytes(8);
@@ -188,4 +188,3 @@ else{
     exit();
 }
 //*********************************************************************************
-?>

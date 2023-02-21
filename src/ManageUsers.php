@@ -7,7 +7,7 @@ if (!isset($_SESSION['Admin-name'])) {
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Manage Users</title>
+	<title>Administrar Usuario</title>
   	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="icon" type="image/png" href="images/favicon.png">
@@ -47,23 +47,23 @@ if (!isset($_SESSION['Admin-name'])) {
 <body>
 <?php include'header.php';?>
 <main>
-	<h1 class="slideInDown animated">Add a new User or update his information <br> or remove him</h1>
+	<h1 class="slideInDown animated">Añade un nuevo usuario o actualiza su información <br> ó eliminarlo</h1>
 	<div class="form-style-5 slideInDown animated">
 		<form enctype="multipart/form-data">
 			<div class="alert_user"></div>
 			<fieldset>
-				<legend><span class="number">1</span> User Info</legend>
+				<legend><span class="number">1</span> Información de Usuario</legend>
 				<input type="hidden" name="user_id" id="user_id">
-				<input type="text" name="name" id="name" placeholder="User Name...">
-				<input type="text" name="number" id="number" placeholder="Serial Number...">
-				<input type="email" name="email" id="email" placeholder="User Email...">
+				<input type="text" name="name" id="name" placeholder="Nombre de Usuario...">
+				<input type="text" name="number" id="number" placeholder="Número de Serie...">
+				<input type="email" name="email" id="email" placeholder="Correo del Usuario...">
 			</fieldset>
 			<fieldset>
-			<legend><span class="number">2</span> Additional Info</legend>
+			<legend><span class="number">2</span> Información Adicional</legend>
 			<label>
-				<label for="Device"><b>User Department:</b></label>
+				<label for="Device"><b>Carrera del Usuario:</b></label>
                     <select class="dev_sel" name="dev_sel" id="dev_sel" style="color: #000;">
-                      <option value="0">All Departments</option>
+                      <option value="0">Todas las Carreras</option>
                       <?php
                         require'connectDB.php';
                         $sql = "SELECT * FROM devices ORDER BY device_name ASC";
@@ -82,13 +82,13 @@ if (!isset($_SESSION['Admin-name'])) {
                         }
                       ?>
                     </select>
-				<input type="radio" name="gender" class="gender" value="Female">Female
-	          	<input type="radio" name="gender" class="gender" value="Male" checked="checked">Male
+				<input type="radio" name="gender" class="gender" value="Female">Mujer
+	          	<input type="radio" name="gender" class="gender" value="Male" checked="checked">Hombre
 	      	</label >
 			</fieldset>
-			<button type="button" name="user_add" class="user_add">Add User</button>
-			<button type="button" name="user_upd" class="user_upd">Update User</button>
-			<button type="button" name="user_rmo" class="user_rmo">Remove User</button>
+			<button type="button" name="user_add" class="user_add">Añadir Usuario</button>
+			<button type="button" name="user_upd" class="user_upd">Actualizar Usuario</button>
+			<button type="button" name="user_rmo" class="user_rmo">Remover Usuario</button>
 		</form>
 	</div>
 

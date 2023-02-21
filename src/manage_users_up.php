@@ -2,12 +2,12 @@
   <table class="table">
     <thead class="table-primary">
       <tr>
-        <th>Card UID</th>
-        <th>Name</th>
-        <th>Gender</th>
-        <th>S.No</th>
-        <th>Date</th>
-        <th>Department</th>
+        <th>UID de Tarjeta</th>
+        <th>Nombre</th>
+        <th>Género</th>
+        <th>Número de Serie</th>
+        <th>Fecha</th>
+        <th>Carrera</th>
       </tr>
     </thead>
     <tbody class="table-secondary">
@@ -29,12 +29,12 @@
                   <TR>
                   	<TD><?php  
                     		if ($row['card_select'] == 1) {
-                    			echo "<span><i class='glyphicon glyphicon-ok' title='The selected UID'></i></span>";
+                    			echo "<span><i class='glyphicon glyphicon-ok' title='El UID seleccionado'></i></span>";
                     		}
                         $card_uid = $row['card_uid'];
                     	?>
                     	<form>
-                    		<button type="button" class="select_btn" id="<?php echo $card_uid;?>" title="select this UID"><?php echo $card_uid;?></button>
+                    		<button type="button" class="select_btn" id="<?php echo $card_uid;?>" title="seleccione el UID"><?php echo $card_uid;?></button>
                     	</form>
                     </TD>
                   <TD><?php echo $row['username'];?></TD>

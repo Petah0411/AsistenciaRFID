@@ -5,12 +5,12 @@ session_start();
 	<table class="table">
 		<thead>
 	      <tr>
-	        <th>De.Name</th>
-	        <th>De.Department</th>
-	        <th>De.UID</th>
-	        <th>De.Date</th>
-	        <th>De.Mode</th>
-	        <th>De.Config</th>
+	        <th>Nombre de Dispositivo</th>
+	        <th>Nombre de Carrera</th>
+	        <th>UID</th>
+	        <th>Fecha</th>
+	        <th>Modo</th>
+	        <th>Config</th>
 	      </tr>
     	</thead>
     	<tbody>
@@ -32,21 +32,21 @@ session_start();
 
 					      	$de_mode = '<div class="mode_select">
 					      	<input type="radio" id="'.$row["id"].'-one" name="'.$row["id"].'" class="mode_sel" data-id="'.$row["id"].'" value="0" '.$radio1.'/>
-					                    <label for="'.$row["id"].'-one">Enrollment</label>
+					                    <label for="'.$row["id"].'-one">Registro</label>
 		                    <input type="radio" id="'.$row["id"].'-two" name="'.$row["id"].'" class="mode_sel" data-id="'.$row["id"].'" value="1" '.$radio2.'/>
-					                    <label for="'.$row["id"].'-two">Attendance</label>
+					                    <label for="'.$row["id"].'-two">Asistencia</label>
 					                    </div>';
 
 					    	echo '<tr>
 							        <td>'.$row["device_name"].'</td>
 							        <td>'.$row["device_dep"].'</td>
-							        <td><button type="button" class="dev_uid_up btn btn-warning" id="del_'.$row["id"].'" data-id="'.$row["id"].'" title="Update this device Token"><span class="glyphicon glyphicon-refresh"> </span></button>
+							        <td><button type="button" class="dev_uid_up btn btn-warning" id="del_'.$row["id"].'" data-id="'.$row["id"].'" title="Actualizar el token de este dispositivo"><span class="glyphicon glyphicon-refresh"> </span></button>
 							        	'.$row["device_uid"].'
 							        </td>
 							        <td>'.$row["device_date"].'</td>
 							        <td>'.$de_mode.'</td>
 							        <td>
-								    	<button type="button" class="dev_del btn btn-danger" id="del_'.$row["id"].'" data-id="'.$row["id"].'" title="Delete this device"><span class="glyphicon glyphicon-trash"></span></button>
+								    	<button type="button" class="dev_del btn btn-danger" id="del_'.$row["id"].'" data-id="'.$row["id"].'" title="Eliminar este dispositivo"><span class="glyphicon glyphicon-trash"></span></button>
 								    </td>
 							      </tr>';
 					    }

@@ -6,13 +6,13 @@ session_start();
     <thead class="table-primary">
       <tr>
         <th>ID</th>
-        <th>Name</th>
-        <th>Serial Number</th>
-        <th>Card UID</th>
-        <th>Device Dep</th>
-        <th>Date</th>
-        <th>Time In</th>
-        <th>Time Out</th>
+        <th>Nombre</th>
+        <th>Número de Serie</th>
+        <th>UID de Tarjeta</th>
+        <th>Carrera/Dispositivo</th>
+        <th>Fecha</th>
+        <th>Hora de Entrada</th>
+        <th>Hora de Salida</th>
       </tr>
     </thead>
     <tbody class="table-secondary">

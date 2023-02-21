@@ -31,7 +31,7 @@ session_start();
 <main>
   <?php 
     if (!empty($_GET['selector']) && !empty($_GET['validator'])) {
-        echo '<h1 class="slideInDown animated">Please, Insert your new Password</h1>';
+        echo '<h1 class="slideInDown animated">Por favor, ingrese la nueva contraseña</h1>';
     }
   ?>
 <!-- Log In -->
@@ -42,7 +42,7 @@ session_start();
         <?php  
             if (empty($_GET['selector']) || empty($_GET['validator'])) {
               echo '<div class="alert alert-danger">
-                        Could not validate your request, please retry!!
+                        No se pudo validar su solicitud, intente de nuevo!!
                       </div>';
             }
             elseif (!empty($_GET['selector']) && !empty($_GET['validator'])) {
@@ -51,7 +51,7 @@ session_start();
             
               if (ctype_xdigit($selector) !== false && ctype_xdigit($validator) !== false) {
                 echo '<div class="alert alert-success">
-                        The link is valid to reset the admin password
+                        El link es válido para reestablecer la contraseña del admin.
                       </div>';
                 ?>
                 <div class="form">
@@ -59,9 +59,9 @@ session_start();
                   <form class="login-form" action="ac_reset_pass.php" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="selector" value="<?php echo $selector?>">
                     <input type="hidden" name="validator" value="<?php echo $validator?>">
-                    <input type="password" name="pwd" placeholder="Enter a new Password..." required/>
-                    <input type="password" name="pwd_re" placeholder="Repeat new Password..." required/>
-                    <button type="submit" name="reset">Reset Password</button>
+                    <input type="password" name="pwd" placeholder="Ingrese una nueva contraseña..." required/>
+                    <input type="password" name="pwd_re" placeholder="Repita la contraseña..." required/>
+                    <button type="submit" name="reset">Reestablecer Contraseña</button>
                   </form>
                 </div>
                 <?php

@@ -1,8 +1,8 @@
 <?php
 	//Connect to database
     $servername = "localhost";
-    $username = "root";		//put your phpmyadmin username.(default is "root")
-    $password = "";			//if your phpmyadmin has a password put it here.(default is "root")
+    $username = "root";		//Pon tu nombre de ussuario de la BD.(default is "root")
+    $password = "";			//Si phpmyadmin tiene una contraseña ingresar aquí.(por defecto es "root")
     $dbname = "";
     
 	$conn = new mysqli($servername, $username, $password, $dbname);
@@ -37,9 +37,9 @@
 	) ENGINE=InnoDB DEFAULT CHARSET=latin1";
 
 	if ($conn->query($sql) === TRUE) {
-	    echo "Table users created successfully";
+	    echo "Tabla usuarios creada exitosamente";
 	} else {
-	    echo "Error creating table: " . $conn->error;
+	    echo "Error creando la tabla: " . $conn->error;
 	}
 
 	$sql = "CREATE TABLE IF NOT EXISTS `users_logs` (
@@ -53,9 +53,9 @@
 	) ENGINE=InnoDB DEFAULT CHARSET=latin1";
 
 	if ($conn->query($sql) === TRUE) {
-	    echo "Table users_logs created successfully";
+	    echo "Tabla users_logs creado exitosamente";
 	} else {
-	    echo "Error creating table: " . $conn->error;
+	    echo "Error creando la tabla: " . $conn->error;
 	}
 		
 	$conn->close();
