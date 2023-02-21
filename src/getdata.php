@@ -90,17 +90,17 @@ if (isset($_GET['card_uid']) && isset($_GET['device_token'])) {
                                 }
                             }
                             else {
-                                echo "Not Allowed!";
+                                echo "No permitido!";
                                 exit();
                             }
                         }
                         else if ($row['add_card'] == 0){
-                            echo "Not registerd!";
+                            echo "No registrado!";
                             exit();
                         }
                     }
                     else{
-                        echo "Not found!";
+                        echo "No encontrado!";
                         exit();
                     }
                 }
@@ -142,14 +142,14 @@ if (isset($_GET['card_uid']) && isset($_GET['device_token'])) {
                                     $sql="UPDATE users SET card_select=1 WHERE card_uid=?";
                                     $result = mysqli_stmt_init($conn);
                                     if (!mysqli_stmt_prepare($result, $sql)) {
-                                        echo "SQL_Error_insert_An_available_card";
+                                        echo "SQL_Error_inserte una tarjeta disponible";
                                         exit();
                                     }
                                     else{
                                         mysqli_stmt_bind_param($result, "s", $card_uid);
                                         mysqli_stmt_execute($result);
 
-                                        echo "available";
+                                        echo "Disponible";
                                         exit();
                                     }
                                 }
@@ -158,14 +158,14 @@ if (isset($_GET['card_uid']) && isset($_GET['device_token'])) {
                                 $sql="UPDATE users SET card_select=1 WHERE card_uid=?";
                                 $result = mysqli_stmt_init($conn);
                                 if (!mysqli_stmt_prepare($result, $sql)) {
-                                    echo "SQL_Error_insert_An_available_card";
+                                    echo "SQL_Error_inserte_una_tarjeta_disponible";
                                     exit();
                                 }
                                 else{
                                     mysqli_stmt_bind_param($result, "s", $card_uid);
                                     mysqli_stmt_execute($result);
 
-                                    echo "available";
+                                    echo "disponible";
                                     exit();
                                 }
                             }
@@ -191,7 +191,7 @@ if (isset($_GET['card_uid']) && isset($_GET['device_token'])) {
                                 mysqli_stmt_bind_param($result, "sss", $card_uid, $device_uid, $device_dep );
                                 mysqli_stmt_execute($result);
 
-                                echo "succesful";
+                                echo "Exitoso";
                                 exit();
                             }
                         }
@@ -200,7 +200,7 @@ if (isset($_GET['card_uid']) && isset($_GET['device_token'])) {
             }
         }
         else{
-            echo "Invalid Device!";
+            echo "Dispositivo/Carrera inválido!";
             exit();
         }
     }          
