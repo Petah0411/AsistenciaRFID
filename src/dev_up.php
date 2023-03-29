@@ -56,4 +56,3 @@ session_start();
     	</tbody>
 	</table>
 </div>
-<!-- <button type="button" class="dev_pro_up btn btn-info" id="del_'.$row["id"].'" data-id="'.$row["id"].'"  title="Change this device Project"><span class="glyphicon glyphicon-cog"> </span></button> -->

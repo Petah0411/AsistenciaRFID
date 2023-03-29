@@ -8,7 +8,7 @@ if (isset($_POST['dev_add'])) {
     $dev_dep = $_POST['dev_dep'];
 
     if (empty($dev_name)) {
-        echo '<p class="alert alert-danger">Please, Set the device name!!</p>';
+        echo '<p class="alert alert-danger">Por favor, coloque el nombre del dispositivo!!</p>';
     }
     elseif (empty($dev_dep)) {
         echo '<p class="alert alert-danger">Por favor, coloque el dispositivo del departamento!!</p>';

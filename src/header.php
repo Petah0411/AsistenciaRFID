@@ -62,10 +62,10 @@
     <?php  
     	if (isset($_SESSION['Admin-name'])) {
     		echo '<a href="#" data-toggle="modal" data-target="#admin-account">'.$_SESSION['Admin-name'].'</a>';
-    		echo '<a href="logout.php">Log Out</a>';
+    		echo '<a href="logout.php">Cerrar Sesión</a>';
     	}
     	else{
-    		echo '<a href="login.php">Log In</a>';
+    		echo '<a href="login.php">Iniciar Sesión</a>';
     	}
     ?>
     <a href="javascript:void(0);" class="icon" onclick="navFunction()">

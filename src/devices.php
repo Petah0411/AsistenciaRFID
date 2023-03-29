@@ -87,7 +87,6 @@ if (!isset($_SESSION['Admin-name'])) {
 		    </div>
 		  </div>
 		</div>
-		<!-- //New Devices -->
 	</section>
 </main>
 </body>

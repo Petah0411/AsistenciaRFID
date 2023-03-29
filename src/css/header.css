@@ -111,8 +111,8 @@ header, main {
     width: 90% !important;
   }
 }	
-tbody tr:nth-child(even){background-color: #388994;}
-tbody tr:nth-child(odd){background-color: #3f9aa6;}
+tbody tr:nth-child(even){background-color: #5b7cf1;}
+tbody tr:nth-child(odd){background-color: #a7b7ee;}
 
 tbody tr:hover {opacity: 0.8;}
 
@@ -128,13 +128,13 @@ span.psw {
   color: #fff !important;
 }
 .modal-header, .modal-footer {
-  background-color: #388994 !important;
+  background-color: #4b6fef !important;
   border: none !important;
   color: #fff !important;
 }
 
 .modal-body {
-  background-color: #3f9aa6 !important;
+  background-color: #788cd4 !important;
 }
 
 .modal-body input[type="text"],
